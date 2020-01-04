@@ -1,10 +1,10 @@
-package com.example.demo;
+package com.example.springmsqlapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringBootCrudApplicationTests {
+class SpringMysqlApplicationTests {
 
 	@Test
 	void contextLoads() {

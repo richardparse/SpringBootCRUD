@@ -1,13 +1,13 @@
-package com.example.demo;
+package com.example.springmsqlapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootCrudApplication {
+public class SpringMysqlApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootCrudApplication.class, args);
+		SpringApplication.run(SpringMysqlApplication.class, args);
 	}
 
 }
