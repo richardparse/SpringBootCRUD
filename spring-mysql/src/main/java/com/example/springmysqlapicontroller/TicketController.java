@@ -9,23 +9,23 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.springmysqldao.TicketDao;
-import com.example.springmysqlapimodel.*;
+import com.example.springmysqlapidao.TicketDao;
+import com.example.springmysqlapimodel.Ticket;
 
 @RestController
+@RequestMapping("/ticket")
 public class TicketController {
-
 	@Autowired
 	private TicketDao dao;
 	
 	@PostMapping("/bookTickets")
-	public String bookTicket(List<Ticket> tickets) {
+	public String bookTicket(@RequestBody List<Ticket> tickets) {
 		dao.save(tickets);
-		return "ticket booked : " + tickets.size();	
+		return "ticket booked : " + tickets.size();
 	}
 
 	@GetMapping("/getTickets")
 	public List<Ticket> getTickets() {
-		return (List<Ticket> dao.findAll());
+		return (List<Ticket>) dao.findAll();
 	}
 }
